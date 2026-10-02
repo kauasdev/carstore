@@ -9,22 +9,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
-@WebServlet("/create-car")
-public class CreateCarServlet extends HttpServlet {
+@WebServlet("/find-all-cars")
+public class ListCarServlet extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
-
-        String name = request.getParameter("name");
-
-        Car car = new Car();
-        car.setName(name);
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         CarDAO dao = new CarDAO();
-        dao.createCar(car);
+        List<Car> allCars = dao.findAllCars();
 
-        request.getRequestDispatcher("dashboard.jsp").forward(request, resp);
+        req.setAttribute("cars", allCars);
+
+        req.getRequestDispatcher("dashboard.jsp").forward(req, resp);
 
     }
 

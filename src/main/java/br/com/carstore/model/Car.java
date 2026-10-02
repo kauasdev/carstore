@@ -5,13 +5,23 @@ public class Car {
     private String name;
     private String color;
     private String model;
+    private int id;
 
-    public String getName() {
-        return name;
+    public Car(String name) {
+        this.name = name;
     }
 
-    public void setName(String name) {
+    public Car(String name, int id) {
         this.name = name;
+        this.id = id;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
     }
 
     public String getColor() {
@@ -22,11 +32,12 @@ public class Car {
         this.color = color;
     }
 
-    public String getModel() {
-        return model;
+    public String getName() {
+        return name;
     }
 
-    public void setModel(String model) {
-        this.model = model;
+    public void setName(String name) {
+        this.name = name;
     }
+
 }
