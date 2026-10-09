@@ -2,19 +2,10 @@ package br.com.carstore.model;
 
 public class Car {
 
+    private String id;
     private String name;
     private String color;
     private String model;
-    private int id;
-
-    public Car(String name) {
-        this.name = name;
-    }
-
-    public Car(String name, int id) {
-        this.name = name;
-        this.id = id;
-    }
 
     public String getModel() {
         return model;
@@ -38,6 +29,14 @@ public class Car {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
 }

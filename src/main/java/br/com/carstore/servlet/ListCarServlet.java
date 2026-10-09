@@ -18,11 +18,12 @@ public class ListCarServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         CarDAO dao = new CarDAO();
+
         List<Car> allCars = dao.findAllCars();
 
         req.setAttribute("cars", allCars);
 
-        req.getRequestDispatcher("dashboard.jsp").forward(req, resp);
+        req.getRequestDispatcher("/dashboard.jsp").forward(req, resp);
 
     }
 

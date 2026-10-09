@@ -2,3 +2,4 @@ br\com\carstore\dao\CarDAO.class
 br\com\carstore\servlet\CreateCarServlet.class
 br\com\carstore\servlet\ListCarServlet.class
 br\com\carstore\model\Car.class
+br\com\carstore\servlet\DeleteCarServlet.class
