@@ -7,6 +7,15 @@ public class Car {
     private String color;
     private String model;
 
+    public Car(String carName) {
+        this.name = carName;
+    }
+
+    public Car(){
+
+    }
+
+
     public String getModel() {
         return model;
     }
